@@ -47,7 +47,7 @@ h2 small{font:400 13px SM,monospace;color:#888}
 </style></head><body>
 <header><img src="assets/logo.png" alt="Richmans Sport"><h1>Content</h1>
 <div class="meta">141 ads · feed 1080x1440 + story 1080x1920 · fall 2026</div>
-<div class="zips"><a class="zip" href="Richmans_Hat_Ads_Feed.zip?v=1793374764" download>Download all feed <span>24 MB</span></a><a class="zip" href="Richmans_Hat_Ads_Story.zip?v=1793374764" download>Download all story <span>29 MB</span></a></div></header>
+<div class="zips"><a class="zip" href="Richmans_Hat_Ads_Feed.zip?v=1793375870" download>Download all feed <span>24 MB</span></a><a class="zip" href="Richmans_Hat_Ads_Story.zip?v=1793375870" download>Download all story <span>29 MB</span></a></div></header>
 <div class="bar" id="bar"><button data-k="feed" aria-pressed="true">Feed</button><button data-k="story" aria-pressed="false">Story</button><span class="sep"></span>
 <button data-g="all" aria-pressed="true">All 141</button><button data-g="artroom" aria-pressed="false">Art: In the Room 10</button><button data-g="art" aria-pressed="false">Art: Gallery Wall 22</button><button data-g="artpop" aria-pressed="false">Art: Bold 24</button><button data-g="amer" aria-pressed="false">American Golf 2</button><button data-g="mag" aria-pressed="false">Magazine 29</button><button data-g="rev" aria-pressed="false">Reviews 5</button><button data-g="out" aria-pressed="false">The Outlaw Hat 2</button><button data-g="r" aria-pressed="false">The &#x27;R&#x27; Hat 3</button><button data-g="eag" aria-pressed="false">The Eagle Hat 6</button><button data-g="tts" aria-pressed="false">Tee Time Secured 3</button><button data-g="deal" aria-pressed="false">Bundles and Deals 2</button><button data-g="shot" aria-pressed="false">Studio Shots 14</button><button data-g="clean" aria-pressed="false">Clean Product 8</button><button data-g="spec" aria-pressed="false">Spec Sheets 11</button></div>
 <main id="m"></main><div class="lb" id="lb"><img alt=""></div>
@@ -66,7 +66,7 @@ function render(){
   m.innerHTML=SECT.filter(([g])=>st.g==="all"||st.g===g).map(([g,t])=>{
     const items=DATA.filter(a=>a.g===g&&!(hideDel&&fb.del.includes(a.id)));
     return `<h2>${esc(t)} <small>${items.length} ads</small></h2><div class="grid">${items.map(a=>{const f=`ads/${st.k}/${st.k==="feed"?a.f:a.s}`;
-      return `<div class="card ${fb.del.includes(a.id)?"gone":""}"><a class="im" href="${f}" data-full="${f}"><img loading="lazy" src="${f}?v=1793374764" alt="${esc(a.id)}"></a>
+      return `<div class="card ${fb.del.includes(a.id)?"gone":""}"><a class="im" href="${f}" data-full="${f}"><img loading="lazy" src="${f}?v=1793375870" alt="${esc(a.id)}"></a>
       <div class="info"><b>${a.id}</b><p>${esc(a.h)}</p><div class="acts"><a href="${f}" download="${f.split("/").pop()}">Download</a></div><button class="cu" data-url="${esc(a.link)}">Copy URL</button><div class="url">${esc(a.link.replace("https://",""))}</div><div class="fb"><button data-love="${a.id}" class="${fb.love.includes(a.id)?"on":""}">♥ Love</button><button data-del="${a.id}" class="${fb.del.includes(a.id)?"on":""}">✕ Delete</button></div></div></div>`}).join("")}</div>`;
   }).join("");
 }
